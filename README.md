@@ -1,2 +1,3 @@
 # CubingDeveloper.github.io
-My test website
+Hello World!
+This website is currently under construction. 
