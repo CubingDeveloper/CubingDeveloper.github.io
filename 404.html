@@ -39,10 +39,10 @@ button:hover {
     </style>
 </head>
 <body style="align-items: center; justify-content: center;">
-    <main>
-        <h1 class="type-effect">Uh oh! This page does not exist!</h1>
-        <h3 class="type-effect">Make sure you entered the correct URL.</h3>
-        <button autofocus="true" onclick="location.assign('/')" style="cursor: pointer;">Go back home</button>
+    <main class="appear-effect">
+        <h1 class="type-effect" type-text="Uh oh! This page does not exist!" type-speed="2"></h1>
+        <h3 class="type-effect" do-appear-effect="true" appear-delay="1">Make sure you entered the correct URL.</h3>
+        <button autofocus="true" onclick="location.assign('/')" style="cursor: pointer;" do-appear-effect="true" appear-delay="1.5">Go back home</button>
     </main>
     <script src="js/effectHandler.js"></script>
 </body>

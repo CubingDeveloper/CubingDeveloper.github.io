@@ -39,7 +39,7 @@ function playProperEffect(element){
                 v.style["animation-name"] = "appear"
                 v.style["animation-duration"] = appearDuration
                 v.style["animation-timing-function"] = "ease-in-out"
-                v.style["animation-delay"] = `${v.getAttribute("appear-delay")}`
+                v.style["animation-delay"] = `${v.getAttribute("appear-delay")}s`
                 v.style["animation-fill-mode"] = "forwards"
             }
         })
