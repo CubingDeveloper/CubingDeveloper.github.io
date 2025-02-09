@@ -29,6 +29,10 @@ Global styles
     text-decoration: none;   
 }
 
+*[do-appear-effect="true"] {
+    opacity: 0;
+}
+
 :root {
     /***
     Colo(u)rs
