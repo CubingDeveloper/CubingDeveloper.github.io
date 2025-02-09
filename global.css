@@ -1,0 +1,59 @@
+/*
+Global 
+*/
+
+/**
+Imports/Animations
+**/
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@keyframes appear {
+  0% {
+        position: relative;
+        opacity: 0;
+        top: 50%;
+    }
+  100% {
+        position: relative;
+        opacity: 1;
+        top: 0;
+        }
+}
+
+/**
+Global styles
+**/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", serif;
+    text-decoration: none;   
+}
+
+:root {
+    /***
+    Colo(u)rs
+    **/
+    --color-secondary: #0d1b2a;
+    --color-primary: #1b263b;
+    --color-font: #dff1f1;
+    --color-font-secondary: #c2ecec;
+    --color-highlight: #e7fafa;
+
+    /***
+    Sizes
+    ***/
+    --font-size-xl: clamp(2vw, 16px, 100px);
+    --font-size-xxl: clamp(4vw, 16px, 100px);
+    --font-size-xxxl: clamp(6vw, 16px, 100px);
+}
+
+a {color: inherit;}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    overflow-x: hidden;
+}
