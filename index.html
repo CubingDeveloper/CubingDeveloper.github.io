@@ -148,7 +148,7 @@ function playProperEffect(element){
         element.style.opacity = 0
         element.style["animation-name"] = "appear"
         element.style["animation-duration"] = `${element.getAttribute("appear-duration") || 1}s`
-        element.style["animation-timing-function"] = "linear"
+        element.style["animation-timing-function"] = "ease-in-out"
         element.style["animation-delay"] = "1s"
         element.style["animation-fill-mode"] = "forwards"
     }
