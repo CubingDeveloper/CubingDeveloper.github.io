@@ -29,11 +29,9 @@ function playProperEffect(element){
         var appearDuration = `${element.getAttribute("appear-duration") || 1}s`
 
         element.dataset.appeared = "true";
-        console.log(element.childNodes)
         element.childNodes.forEach((v, k) => {
             if (v.nodeName == "#text") return
             if (v.getAttribute("do-appear-effect")) {
-                console.log("Adding effect!!", v)
 
                 v.style.opacity = 0
                 v.style["animation-name"] = "appear"
