@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CubingDeveloper</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <style>
+    /* ---------- Theme Variables & Transitions ---------- */
+    :root {
+      --color-bg: #fff;
+      --color-font: #000;
+      --color-secondary: #f0f0f0;
+      /* other variables as needed */
+    }
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-font);
+      transition: background-color 0.5s, color 0.5s;
+    }
+    body.dark-mode {
+      --color-bg: #121212;
+      --color-font: #f0f0f0;
+      --color-secondary: #333;
+    }
+
+    /* ---------- Navbar settings ---------- */
+    .top-navbar {
+      height: 7.5vh;
+      background-color: var(--color-secondary);
+      color: var(--color-font);
+      width: 100vw;
+    }
+    .top-navbar ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      margin: 0 1%;
+      font-size: var(--font-size-xl);
+      list-style-type: none;
+      align-items: center;
+    }
+    .top-navbar ul li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ---------- Light/Dark Toggle Button ---------- */
+    /* Place the toggle button as one of the navbar items */
+    #toggle-mode {
+      cursor: pointer;
+      padding: 10px;
+    }
+    /* We’re using an inline SVG with a circle element */
+    #toggle-mode svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+    /* The circle: initially outlined with no fill */
+    #toggle-mode svg circle {
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: transparent;
+      /* ensure any fill transition is smooth */
+      transition: fill 0.6s ease;
+    }
+
+    /* ---------- Animations for the Toggle ---------- */
+    /* When switching to dark mode, we want the fill to be added in two phases */
+    .animate-dark {
+      animation: fillDark 0.6s forwards;
+    }
+    @keyframes fillDark {
+      0% {
+        fill: transparent;
+      }
+      50% {
+        /* first half: keep outline only */
+        fill: transparent;
+      }
+      100% {
+        /* second half: fill with currentColor */
+        fill: currentColor;
+      }
+    }
+
+    /* When switching back (to light mode) the fill is removed in reverse */
+    .animate-light {
+      animation: unfillDark 0.6s forwards;
+    }
+    @keyframes unfillDark {
+      0% {
+        fill: currentColor;
+      }
+      50% {
+        fill: currentColor;
+      }
+      100% {
+        fill: transparent;
+      }
+    }
+
+    /* ---------- Other CSS (Main content, Socials, etc.) ---------- */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: auto;
+    }
+    .main-title {
+      padding-top: 20px;
+      color: var(--color-font);
+      font-size: var(--font-size-xxxl);
+      padding-bottom: 20px;
+    }
+    .paragraph {
+      color: var(--color-font-secondary);
+      font-size: var(--font-size-xl);
+      text-align: center;
+      width: 75%;
+    }
+    .socials {
+      margin-top: max(50px, 10vh);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    ion-icon {
+      font-size: var(--font-size-xxxl);
+      color: var(--color-font-secondary);
+    }
+    .icon {
+      width: var(--font-size-xxxl);
+      height: var(--font-size-xxxl);
+      fill: var(--color-font-secondary);
+    }
+    h2 {
+      font-size: var(--font-size-xxl);
+      color: var(--color-font-secondary);
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-navbar">
+    <ul>
+      <li>
+        <strong><a href="/">CubingDeveloper</a></strong>
+      </li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <!-- Light/Dark Mode Toggle Button -->
+      <li id="toggle-mode">
+        <!-- A simple circle SVG that will animate its fill -->
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+        </svg>
+      </li>
+    </ul>
+  </nav>
+  <main class="main-content">
+    <h1 class="type-effect main-title" type-text="CubingDeveloper"></h1>
+    <p class="appear-effect paragraph" appear-duration="0.5">
+      <span do-appear-effect="true" appear-delay="0.5">
+        Hi, I'm CubingDeveloper, a passionate developer from Sweden.
+      </span>
+      <br />
+      <span do-appear-effect="true" appear-delay="0.75">
+        I'm deeply interested in creating games and exploring new technologies.
+      </span>
+      <br />
+      <span do-appear-effect="true" appear-delay="1">
+        When I'm not coding, I enjoy playing piano and chess.
+      </span>
+      <br />
+    </p>
+    <div class="socials appear-effect">
+      <h2 do-appear-effect="true" appear-delay="1.25">Socials</h2>
+      <div class="socials-inner appear-effect">
+        <a do-appear-effect="true" appear-delay="1.5" href="https://discord.gg/k8wNB9fv9">
+          <ion-icon name="logo-discord"></ion-icon>
+        </a>
+        <a do-appear-effect="true" appear-delay="1.6" href="https://youtube.com/@CubingDeveloper">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a do-appear-effect="true" appear-delay="1.7" href="https://github.com/CubingDeveloper">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a do-appear-effect="true" appear-delay="1.8" href="https://cubingdeveloper.itch.io">
+          <svg class="icon" version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 246 222" width="246" height="222">
+            <path class="a" d="m32 2.4c-10.7 6.3-31.8 30.5-32 36.9v10.5c0 13.3 12.5 25.1 23.8 25.1 13.6 0 24.9-11.3 24.9-24.7 0 13.4 10.9 24.7 24.5 24.7 13.6 0 24.2-11.3 24.2-24.7 0 13.4 11.6 24.7 25.2 24.7h0.2c13.6 0 25.2-11.3 25.2-24.7 0 13.4 10.6 24.7 24.2 24.7 13.6 0 24.5-11.3 24.5-24.7 0 13.4 11.3 24.7 24.9 24.7 11.3 0 23.8-11.8 23.8-25.1v-10.5c-0.2-6.4-21.3-30.6-32-36.9-33.3-1.2-56.3-1.4-90.7-1.4-34.4 0-81.2 0.5-90.7 1.4zm65.2 66.2q-0.5 0.8-1 1.6-0.6 0.9-1.2 1.6-0.6 0.8-1.2 1.5-0.7 0.8-1.4 1.4c-5.1 5.1-12.2 8.2-19.9 8.2q-2.8 0-5.5-0.6-2.7-0.5-5.3-1.5-2.5-1.1-4.9-2.6-2.3-1.5-4.2-3.5c-1.9-1.8-3.3-3.7-4.6-6-1.3 2.3-3.1 4.2-5 6q-2 2-4.3 3.5-2.3 1.5-4.9 2.6-2.5 1-5.2 1.5-2.8 0.6-5.5 0.6c-1 0-1.9-0.3-2.7-0.6-1.1 11.4-1.6 22.3-1.7 30.2-0.1 4.1-0.1 7.4-0.1 12 0.2 23.8-2.4 77.3 10.5 90.4 20 4.7 56.7 6.8 93.6 6.8 36.8 0 73.6-2.1 93.5-6.8 12.9-13.1 10.4-66.6 10.6-90.4-0.1-4.6-0.1-7.9-0.1-12-0.2-7.9-0.6-18.8-1.7-30.2-0.8 0.3-1.8 0.6-2.7 0.6q-2.8 0-5.5-0.6-2.7-0.5-5.3-1.5-2.6-1.1-4.9-2.6-2.3-1.5-4.3-3.5-0.7-0.6-1.3-1.4-0.7-0.7-1.3-1.5-0.6-0.8-1.1-1.6-0.5-0.8-1-1.6zm-20.5 26.5c8.1 0 15.3 0 24.3 9.7 7-0.7 14.3-1.1 21.7-1.1 7.3 0 14.7 0.4 21.7 1.1 8.9-9.7 16.1-9.7 24.3-9.7 3.8 0 19.1 0 29.8 30l11.5 41.1c8.5 30.7-2.7 31.4-16.7 31.4-20.8-0.7-32.3-15.8-32.3-30.9-11.5 1.9-24.9 2.8-38.3 2.8-13.4 0-26.8-0.9-38.3-2.8 0 15.1-11.5 30.2-32.3 30.9-14 0-25.2-0.7-16.7-31.4l11.4-41.1c10.7-30 26.1-30 29.9-30zm46 23.6c0 0-21.9 20-25.8 27.2l14.3-0.6v12.5c0 0.6 5.7 0.3 11.5 0.1 5.7 0.2 11.5 0.5 11.5-0.1v-12.5l14.3 0.6c-3.9-7.2-25.8-27.2-25.8-27.2q0 0 0 0z"/>
+          </svg>
+        </a>
+        <a do-appear-effect="true" appear-delay="1.9" href="https://www.roblox.com/users/1095820285/profile">
+          <svg class="icon" version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900">
+            <path class="a" d="m248 112c8.4 0.6 16.3 2.7 24.4 4.9q2.4 0.6 4.7 1.2 5 1.3 10 2.6 12.3 3.3 24.7 6.5 4.3 1.1 8.6 2.2c19.9 5.2 39.9 10.3 59.8 15.4q45.7 11.6 91.3 23.5 39.2 10.2 78.5 20.2 47.2 12.1 94.3 24.3 31.3 8.2 62.7 16.2 1.1 0.3 2.3 0.6 7.3 1.9 14.5 3.7 3.6 0.9 7.2 1.9 1.2 0.3 2.4 0.6 2.4 0.6 4.8 1.2 6.2 1.6 12.3 3.2 6.1 1.5 12.2 3.1 2.2 0.6 4.5 1.1c8.3 2.2 16.6 4.3 24.8 6.6-0.6 7.1-2 13.7-3.9 20.6q-0.4 1.7-0.9 3.4-0.9 3.6-1.9 7.3-2.3 8.8-4.6 17.6-0.5 2.1-1.1 4.1c-3.5 13.7-7 27.3-10.3 41q-8 32.1-16.3 64.1-0.3 1.2-0.6 2.4-2.5 9.5-4.9 19.1-7.3 28.4-14.6 57-1.4 5.3-2.8 10.7-6.4 25.1-12.8 50.3-3 11.6-6 23.2-1.7 6.9-3.5 13.8c-4.4 17.5-8.9 34.9-13.5 52.3q-5.1 19-9.8 38c-8.5 34.6-17.5 69.2-26.5 103.7q-0.3 1.1-0.6 2.3-0.8 2.9-1.6 5.9-0.9 3.6-1.8 7.2c-6.7-0.6-12.8-1.8-19.3-3.6q-1.5-0.4-3-0.8-3.4-0.9-6.7-1.8-8.5-2.2-17-4.5-3.1-0.8-6.3-1.7c-17.1-4.5-34.3-9-51.5-13.5q-8.6-2.2-17.1-4.5-22.5-5.8-45-11.7-11.8-3.1-23.5-6.1-1-0.3-2.1-0.6-25.9-6.8-51.8-13.7-18.3-5-36.7-9.6-27.8-7.1-55.6-14.4c-1.1-0.3-1.1-0.3-2.2-0.6q-27.3-7.1-54.5-14.4c-13.6-3.7-27.3-7.2-40.9-10.7q-21-5.3-41.9-11-20.4-5.5-41-10.9c-1.3-0.3-1.3-0.3-2.7-0.7q-3.8-1-7.7-2-1.1-0.3-2.2-0.6-7.2-1.8-14.3-3.6c0.6-9 3-17.6 5.2-26.3q0.7-2.6 1.4-5.2 1.7-7 3.5-14 1.9-7.4 3.8-14.9 9.8-38.6 19.8-77.2c7.8-30.4 15.6-60.9 23.3-91.4 8.5-33.6 17.1-67.1 25.7-100.6q9.5-37.2 18.9-74.4 9.8-38.6 19.7-77.2 0.3-1.2 0.6-2.4 7.5-29.2 15.1-58.4zm163 275q-0.4 1.5-0.8 3-1.5 6-3 12.1-0.8 2.8-1.5 5.6-4.6 18-9.2 35.9-1.6 5.9-3.2 11.9-1.2 4.9-2.5 9.8-1.5 5.5-2.9 11-0.4 1.7-0.9 3.4-0.4 1.5-0.8 3.1-0.3 1.3-0.7 2.7c-0.5 2.6-0.6 4.9-0.5 7.5q1.2 0.3 2.4 0.6 11.5 2.8 22.9 5.6 5.9 1.5 11.8 2.9 5.7 1.4 11.4 2.8 2.3 0.6 4.6 1.2 12.6 3.1 25.1 6.2 2.3 0.6 4.5 1.2 4.2 1 8.3 2.1 1.9 0.5 3.8 1 1.6 0.4 3.3 0.8c2.7 0.6 5.1 0.7 7.9 0.6q0.3-1.1 0.6-2.1 0.4-1.5 0.8-3.1 0.5-1.7 0.9-3.5 1.1-3.8 2.1-7.7 2.6-9.7 5.2-19.3 1.5-5.4 3-10.8 0.2-1.1 0.5-2.2 3.6-13.3 7.3-26.5 1-3.8 2-7.6 1-3.4 1.9-6.8 0.6-2 1.1-4 0.5-1.7 1-3.4c0.6-2.8 0.7-5.2 0.6-8q-14.2-3.7-28.4-7.3-6.3-1.6-12.6-3.2-11.2-2.9-22.5-5.8-5.7-1.5-11.5-2.9-5.5-1.5-11-2.9-2.1-0.5-4.1-1-2.9-0.8-5.7-1.5-1.6-0.4-3.3-0.8c-2.7-0.6-5.1-0.7-7.9-0.6z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </main>
+  <!-- Ionicons (for other parts of the site) -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="js/effectHandler.js"></script>
+  <script>
+    // ----- JavaScript to Toggle Themes & Animate the Button -----
+    const toggleBtn = document.getElementById("toggle-mode");
+    // Target the circle element inside the SVG
+    const circleElement = toggleBtn.querySelector("svg circle");
+    let darkMode = false;
+    
+    toggleBtn.addEventListener("click", () => {
+      darkMode = !darkMode;
+      // Toggle dark mode on the body
+      document.body.classList.toggle("dark-mode", darkMode);
+      
+      // Remove any previous animation classes to restart animation
+      circleElement.classList.remove("animate-dark", "animate-light");
+      // Trigger reflow so the animation restarts if the same class is applied again
+      void circleElement.offsetWidth;
+      
+      if (darkMode) {
+        // Animate: outline stays then fill appears
+        circleElement.classList.add("animate-dark");
+      } else {
+        // Animate: filled circle “unfills” back to an outline
+        circleElement.classList.add("animate-light");
+      }
+    });
+    
+    // Remove animation classes once the animation completes
+    circleElement.addEventListener("animationend", () => {
+      circleElement.classList.remove("animate-dark", "animate-light");
+    });
+  </script>
+</body>
+</html>
