@@ -20,7 +20,8 @@ function playProperEffect(element){
 
         element.dataset.typed = "true";
         const text = element.getAttribute("type-text");
-        const speed = element.getAttribute("type-speed")
+        const speed = element.getAttribute("type-speed") ;
+
         typeEffect(element, text, speed);
             
     } else if (element.classList.contains("appear-effect")) {
@@ -33,7 +34,7 @@ function playProperEffect(element){
             if (v.nodeName == "#text") return
             if (v.getAttribute("do-appear-effect")) {
 
-                v.style.opacity = 0
+                v.style["opacity"] = 0
                 v.style["animation-name"] = "appear"
                 v.style["animation-duration"] = appearDuration
                 v.style["animation-timing-function"] = "ease-in-out"

@@ -5,40 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CubingDeveloper</title>
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/topbar.css">
     <style>
-/* 
-Navbar settings 
-*/
-.top-navbar {
-    height: 7.5vh;
-    background-color: var(--color-secondary);
-    color: var(--color-font);
-    width: 100vw;
-    padding-top: max(1%, 5px);
-    padding-bottom: max(1%, 5px);
-    padding-left: max(1%, 5px);
-    padding-right: max(1%, 5px);
-}
-.top-navbar ul {
-    width:100%;
-    height:100%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    font-size: var(--font-size-xl);
-    list-style-type: none;
-}
-.top-navbar ul li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.lightdark-toggle {
-    justify-self: right;
-}
-
 /*
 Main content
 */
@@ -87,18 +55,17 @@ h2 {
     font-size: var(--font-size-xxl);
     color: var(--color-font-secondary);
 }
-
     </style>
 </head>
 <body>
     <nav class="top-navbar">
         <ul>
-            <li>
-                <strong><a href="/">CubingDeveloper</a></strong>
+            <li class="home-page-li current-page">
+                <i><strong><a href="/">CubingDeveloper</a></strong></i>
             </li>
-            <li><a href="mailto:contact.cubingdeveloper@gmail.com">Contact</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li class="lightdark-toggle"><ion-icon name="moon"></ion-icon><ion-icon name="sun"></ion-icon></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li class="lightdark-toggle"><ion-icon name="moon"></ion-icon></li>
         </ul>
     </nav>
     <main class="main-content">
@@ -106,7 +73,7 @@ h2 {
         <p class="appear-effect paragraph" appear-duration="0.5">
 
             <span do-appear-effect="true" appear-delay="0.5">Hi, I'm CubingDeveloper, a passionate developer from Sweden.</span><br>
-            <span do-appear-effect="true" appear-delay="0.75">I'm very interested in creating games and exploring new technologies.</span><br>
+            <span do-appear-effect="true" appear-delay="0.75">I'm very interested in creating games and exploring different technologies.</span><br>
             <span do-appear-effect="true" appear-delay="1">When I'm not coding, I enjoy playing piano.</span><br>
 
         </p>
@@ -128,7 +95,11 @@ h2 {
                 </a>
             </div>
         </div>
+        <div class="appear-effect" style="margin-top: 50px; margin-bottom: 50px; height: 25vh;">
+            <img class="appear-effect" src="assets/undraw/programming.svg" appear-duration="5" do-appear-effect="true" appear-delay="2.0" style="height: 100%; width: auto;">
+        </div>
     </main>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="js/effectHandler.js"></script>

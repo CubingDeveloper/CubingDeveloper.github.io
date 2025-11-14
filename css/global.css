@@ -27,6 +27,7 @@ Global styles
     padding: 0;
     font-family: "Space Grotesk", serif;
     text-decoration: none;   
+    text-align: center;
 }
 
 *[do-appear-effect="true"] {
@@ -39,8 +40,10 @@ Global styles
     **/
     --color-secondary: #0d1b2a;
     --color-primary: #1b263b;
+    --color-shadow: #04162c;
     --color-font: #c2eded;
     --color-font-secondary: #c2ecec;
+    --color-link: #4eaed9;
     --color-highlight: #e7fafa;
 
     /***
@@ -49,10 +52,21 @@ Global styles
     --font-size-xl: clamp(2vw, 16px, 100px);
     --font-size-xxl: clamp(4vw, 16px, 100px);
     --font-size-xxxl: clamp(6vw, 16px, 100px);
+    --font-size-paragraph: clamp(2vw, 16px, 100px);
 }
 
-a {color: inherit;}
-
+a {color: var(--color-link)}
+p {color: var(--color-font); font-size: var(--font-size-paragraph)}
+h1, h2, h3, h4, h5, h6 {color: var(--color-font-secondary)}
+h1 {
+    font-size: var(--font-size-xxxl);
+}
+h2 {
+    font-size: var(--font-size-xxl);
+}
+h3 {
+    font-size: var(--font-size-xl);
+}
 body {
     width: 100vw;
     height: 100vh;
@@ -60,4 +74,9 @@ body {
     flex-direction: column;
     background: var(--color-primary);
     overflow-x: hidden;
+}
+
+.current-page {
+    font-weight: bold;
+    color: var(--color-highlight);
 }

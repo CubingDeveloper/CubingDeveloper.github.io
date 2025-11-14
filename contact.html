@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubingDeveloper</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/topbar.css">
+    <style>
+/*
+Main content
+*/
+.main-content {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 10vw);
+    height: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+.main-title {
+    padding-top: 20px;
+    color: var(--color-font);
+    font-size: var(--font-size-xxxl);
+    padding-bottom: 20px;
+}
+.paragraph {
+    color: var(--color-font-secondary);
+    font-size: var(--font-size-xl);
+    text-align: center;
+    width: 75%;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="top-navbar">
+        <ul>
+            <li><strong><i><a href="/">CubingDeveloper</a></i></strong></li>
+            <li><a href="/contact.html" class="current-page">Contact</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li class="lightdark-toggle"><ion-icon name="moon"></ion-icon></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+
+        <h1 class="type-effect" type-text="Contact"></h1>
+        <p class="appear-effect">
+            
+            <span do-appear-effect="true" appear-delay="0.5">If you want to contact me and get a quick response, the best way is to send me a DM on Discord.</span>
+            <span do-appear-effect="true" appear-delay="0.75">My Discord username is <strong>cubnigdeveloper</strong> and my DMs are always open.</span>
+            <span do-appear-effect="true" appear-delay="1">If you don't have discord you can always <a href="mailto:contact.cubingdeveloper@gmail.com">mail me</a> at <strong>contact.cubingdeveloper@gmail.com</strong></span>
+
+        </p>
+
+    </main>
+
+    <div class="appear-effect" style="margin-top: 50px; margin-bottom: 50px; height: 25vh;">
+        <img class="appear-effect" src="assets/undraw/social-media-profile.svg" appear-duration="5" do-appear-effect="true" appear-delay="2.0" style="height: 100%; width: auto;">
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/effectHandler.js"></script>
+</body>
+</html>
