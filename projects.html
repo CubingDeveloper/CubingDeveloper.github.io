@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubingDeveloper</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/topbar.css">
+    <style>
+/*
+Main content
+*/
+.main-content {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 10vw);
+    height: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+.main-title {
+    padding-top: 20px;
+    color: var(--color-font);
+    font-size: var(--font-size-xxxl);
+    padding-bottom: 20px;
+}
+.paragraph {
+    color: var(--color-font-secondary);
+    font-size: var(--font-size-xl);
+    text-align: center;
+    width: 75%;
+}
+.project {
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid var(--color-highlight);
+    background-color: var(--color-secondary);
+}
+.project img {
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="top-navbar">
+        <ul>
+            <li><strong><i><a href="/">CubingDeveloper</a></i></strong></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/projects.html" class="current-page">Projects</a></li>
+            <li class="lightdark-toggle"><ion-icon name="moon"></ion-icon></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+
+        <h1 class="type-effect" type-text="Projects"></h1>
+        <p class="appear-effect">
+            
+            <span do-appear-effect="true" appear-delay="0.5">Here are some of the projects I'm currently working on!</span>
+        </p>
+
+    </main>
+
+    <div class="appear-effect" appear-duration="1" style="margin-top: 50px; gap: max(2vh, 10px); margin-bottom: 50px; margin-left: max(5vw, 20px); margin-right: max(5vw, 20px); display: flex; flex-direction: column; align-items: center;">
+        <div class="project" do-appear-effect="true" appear-delay="0.5">
+            <h2>Mission: DeadAir</h2>margin
+            <img src="assets/project_images/mission_dead_air.webp" alt="Could not get project image.">
+        </div>
+        <div class="project" do-appear-effect="true" appear-delay="0.75">
+
+            <h2>The Complex</h2>
+            <img src="assets/project_images/complex_by_viromalous.webp" alt="Could not get project image.">
+            <p><a href="https://www.roblox.com/games/91712723893267/THE-COMPLEX-COUNTDOWN">The Complex</a> is a <a href="https://www.roblox.com/games/12411473842/Pressure">Pressure</a> fangame developed by a small dev team, that I'm a part of! I am one of the programmers and the one responsible for things such as the main menu and room generation. The game releases on <strong><a href="assets/other/complex_release.ics">May 6th 2026.</a></strong></p>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/effectHandler.js"></script>
+</body>
+</html>
