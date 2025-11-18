@@ -34,13 +34,25 @@ Main content
     width: 75%;
 }
 .project {
-    width: 100%;
+    width: 60vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
     border-radius: 15px;
-    border: 2px solid var(--color-highlight);
+    border: 2px solid var(--color-font);
     background-color: var(--color-secondary);
+
+    padding-left: max(5vw, 20px);
+    padding-right: max(5vw, 20px);
+    padding-top: max(2vh, 10px);
+    padding-bottom: max(2vh, 10px);
 }
 .project img {
     border-radius: 5px;
+    width: 90%;
 }
 
     </style>
@@ -51,7 +63,7 @@ Main content
             <li><strong><i><a href="/">CubingDeveloper</a></i></strong></li>
             <li><a href="/contact.html">Contact</a></li>
             <li><a href="/projects.html" class="current-page">Projects</a></li>
-            <li class="lightdark-toggle"><ion-icon name="moon"></ion-icon></li>
+            <!--<li class="lightdark-toggle"><ion-icon name="moon"></ion-icon></li>-->
         </ul>
     </nav>
 
@@ -67,14 +79,19 @@ Main content
 
     <div class="appear-effect" appear-duration="1" style="margin-top: 50px; gap: max(2vh, 10px); margin-bottom: 50px; margin-left: max(5vw, 20px); margin-right: max(5vw, 20px); display: flex; flex-direction: column; align-items: center;">
         <div class="project" do-appear-effect="true" appear-delay="0.5">
-            <h2>Mission: DeadAir</h2>margin
+            <h2>Mission: DeadAir</h2>
             <img src="assets/project_images/mission_dead_air.webp" alt="Could not get project image.">
+            <p>Mission: DeadAir is <a href="https://www.roblox.com/games/6516141723/DOORS">Doors</a> fangame, that I am the co-owner of! I am working with another person, V Ø R N, who makes awesome music and models.<br/><br/>Image by <a href="https://www.youtube.com/@V%C3%98RN_IIV">V Ø R N</a></p>
         </div>
         <div class="project" do-appear-effect="true" appear-delay="0.75">
 
             <h2>The Complex</h2>
             <img src="assets/project_images/complex_by_viromalous.webp" alt="Could not get project image.">
-            <p><a href="https://www.roblox.com/games/91712723893267/THE-COMPLEX-COUNTDOWN">The Complex</a> is a <a href="https://www.roblox.com/games/12411473842/Pressure">Pressure</a> fangame developed by a small dev team, that I'm a part of! I am one of the programmers and the one responsible for things such as the main menu and room generation. The game releases on <strong><a href="assets/other/complex_release.ics">May 6th 2026.</a></strong></p>
+            <p>
+                <a href="https://www.roblox.com/games/91712723893267/THE-COMPLEX-COUNTDOWN">The Complex</a> is a <a href="https://www.roblox.com/games/12411473842/Pressure">Pressure</a> fangame developed by a small dev team, that I'm a part of! I am one of the programmers and the one responsible for things such as the main menu and room generation. The game releases on <strong><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The+Complex+releases!&dates=20260506T000000Z/20260506T235959Z&details=The+Roblox+game+%22The+Complex%22+releases.&location=Online">May 6th 2026.</a></strong>
+                <br/><br/>
+                Image by <a href="https://www.youtube.com/@ViroIsHerebois">Viromalous</a>.
+            </p>
         </div>
     </div>
 

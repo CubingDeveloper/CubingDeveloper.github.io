@@ -54,21 +54,17 @@ const observer = new IntersectionObserver(entries => {
             playProperEffect(entry.target)
         }
     });
-}, { threshold: 0.5 }); // Trigger when 50% visible
+}, { threshold: 0.25 }); 
 
-// Select all elements you want to apply the typing effect to
 const targets = document.querySelectorAll('.type-effect, .appear-effect'); 
 
-// Observe each element in the NodeList
 targets.forEach(target => {
     observer.observe(target);
 });
 
-// Check if any element is already visible on load
 window.addEventListener('load', () => {
     targets.forEach(target => {
         if (target.getBoundingClientRect().top < window.innerHeight * 0.5) {
-            // Element is already visible, trigger the typing effect
             playProperEffect(target)
         }
     });
